@@ -12,13 +12,16 @@
 // TODO 1b: for each variable, decide: does it change while the piece plays (let) or stay fixed (const)?
 // TODO 1c: on a new line under the variables, change duration: duration = "2n";  Play. Hear the difference?
 // TODO 1d: try the same with note: note = "D4";  Read the error in the console. Then delete that line.
+const note = "C4";
+let duration = "4n";
 
 function exercise1(start) {
-  synth.triggerAttackRelease("C4", "8n", start);
+  synth.triggerAttackRelease(note, duration, start);
   synth.triggerAttackRelease("E4", "8n", start + 0.5);
-  synth.triggerAttackRelease("G4", "8n", start + 1);
+  synth.triggerAttackRelease("G4", "2n", start + 1);
 }
 
+console.log("Now playing " + exercise1);
 // ---------- You don't need to change anything below this line ----------
 
 playOnClick("play-1", exercise1);

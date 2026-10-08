@@ -5,16 +5,21 @@ function playNote(name, length, time) {
   // TODO 5: log what is playing, before the note plays:
   //         console.log("Playing " + name + " for " + length);
   synth.triggerAttackRelease(name, length, time);
+  console.log("Playing " + name + " for " + length);
 }
 
 // TODO 4a: store the three notes and one length in variables, here, above the function.
 // TODO 4b: use those variables in the calls below instead of the values typed in.
 // TODO 4c: change the length variable once. Do all three notes change?
+const note1 = "C4";
+const note2 = "E4";
+const note3 = "G4";
+const length = "16n";
 
 function exercise4(start) {
-  playNote("C4", "8n", start);
-  playNote("E4", "8n", start + beat);
-  playNote("G4", "8n", start + beat * 2);
+  playNote(note1, length, start);
+  playNote(note2, length, start + beat);
+  playNote(note3, length, start + beat * 2);
 }
 
 // ---------- You don't need to change anything below this line ----------
