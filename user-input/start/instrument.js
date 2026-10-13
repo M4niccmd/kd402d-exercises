@@ -22,7 +22,15 @@ document.addEventListener("keyup", showKey);
 //            synth.triggerAttackRelease("C4", "8n");
 // TODO 2b: listen for "keydown" with playNote. Press a.
 // TODO 2c: add an else if, so s plays "D4".
+function playNote(event) {
+  if (event.key === "a") {
+    synth.triggerAttackRelease("C4", "8n");
+  } else if (event.key === "s") {
+    synth.triggerAttackRelease("D4", "8n");
+  }
+}
 
+document.addEventListener("keydown", playNote);
 // ---------- Step 3: let the key choose the note ----------
 // TODO 3a: under this line, store the octave: let octave = 4;
 // TODO 3b: write a function noteFor(key) that gives back the note for a key:
@@ -33,7 +41,10 @@ document.addEventListener("keyup", showKey);
 //          If the answer isn't "", start it: synth.triggerAttack(note);
 // TODO 3d: listen for "keydown" with startNote. Delete the playNote listener from step 2:
 //          startNote does its job now.
-
+let octave = 4;
+function noteFor(a) {
+  
+}
 // ---------- Step 4: press starts it, release ends it ----------
 // TODO 4a: write a function stopNote(event). Ask noteFor for the note again.
 //          If it isn't "", stop it: synth.triggerRelease(note);
