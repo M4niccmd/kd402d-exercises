@@ -12,16 +12,20 @@ function handleKeyDown(event) {
   Tone.start(); // sound can only start after a key press or a click
   console.log(event.key);
 
-  if (event.key === "a") {
-    synth.triggerAttackRelease("C4", "8n");
-  } else if (event.key === "s") {
-    synth.triggerAttackRelease("D4", "8n");
-  } else if (event.key === "d") {
-    synth.triggerAttackRelease("E4", "8n");
+  if (event.key.length === 1 && event.key >= "a" && event.key <= "g") {
+    const note = event.key.toUpperCase() + octave;
+    synth.triggerAttackRelease(note, "8n");
   }
 }
 
 document.addEventListener("keydown", handleKeyDown);
+
+function letterNote(key, oct) {
+  if (key.length === 1 && key >= "a" && key <= "g") {
+    return key.toUpperCase() + oct;
+  }
+  return "";
+}
 
 // ---------- Exercise 5: keys are note names ----------
 // The letter IS the note: press c, hear C.
