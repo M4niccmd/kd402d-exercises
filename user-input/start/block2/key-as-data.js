@@ -6,15 +6,17 @@
 const synth = new Tone.Synth().toDestination();
 
 // The octave every note is played in. Exercise 7 plays one higher with Shift.
-let octave = 4;
+let oct = 4;
 
 function handleKeyDown(event) {
   Tone.start(); // sound can only start after a key press or a click
   console.log(event.key);
 
   if (event.key.length === 1 && event.key >= "a" && event.key <= "g") {
-    const note = event.key.toUpperCase() + octave;
-    synth.triggerAttackRelease(note, "8n");
+    const note = noteForKey(event.key, oct);
+    if (note !== "") {
+      synth.triggerAttackRelease(note, "8n");
+    }
   }
 }
 
@@ -23,27 +25,28 @@ document.addEventListener("keydown", handleKeyDown);
 function letterNote(key, oct) {
   if (key.length === 1 && key >= "a" && key <= "g") {
     return key.toUpperCase() + oct;
+    console.log(key);
   }
   return "";
 }
 
 function noteForKey(key, oct) {
   if (key === "a") {
-    return "C" + oct
+    return "C" + oct;
   } else if (key === "s") {
-    return "D" + oct
+    return "D" + oct;
   } else if (key === "d") {
-    return "E" + oct
+    return "E" + oct;
   } else if (key === "f") {
-    return "F" + oct
+    return "F" + oct;
   } else if (key === "g") {
-    return "G" + oct
+    return "G" + oct;
   } else if (key === "h") {
-    return "A" + oct
+    return "A" + oct;
   } else if (key === "j") {
-    return "B" + oct
+    return "B" + oct;
   } else if (key === "k") {
-    return "C" + (oct + 1)
+    return "C" + (oct + 1);
   }
   return "";
 }
