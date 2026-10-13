@@ -26,6 +26,17 @@ function letterNote(key, oct) {
   }
   return "";
 }
+function noteForKey(key, oct) {
+  if ("a" === "C" + oct) {
+  } else if ("s" === "D" + oct) {
+  } else if ("d" === "E" + oct) {
+  } else if ("f" === "F" + oct) {
+  } else if ("g" === "G" + oct) {
+  } else if ("h" === "A" + oct) {
+  } else if ("j" === "B" + oct) {
+  } else if ("k" === "C" + oct + 1) {
+  }
+}
 
 // ---------- Exercise 5: keys are note names ----------
 // The letter IS the note: press c, hear C.
