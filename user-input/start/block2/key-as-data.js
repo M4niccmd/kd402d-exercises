@@ -26,16 +26,26 @@ function letterNote(key, oct) {
   }
   return "";
 }
+
 function noteForKey(key, oct) {
-  if ("a" === "C" + oct) {
-  } else if ("s" === "D" + oct) {
-  } else if ("d" === "E" + oct) {
-  } else if ("f" === "F" + oct) {
-  } else if ("g" === "G" + oct) {
-  } else if ("h" === "A" + oct) {
-  } else if ("j" === "B" + oct) {
-  } else if ("k" === "C" + oct + 1) {
+  if (key === "a") {
+    return "C" + oct
+  } else if (key === "s") {
+    return "D" + oct
+  } else if (key === "d") {
+    return "E" + oct
+  } else if (key === "f") {
+    return "F" + oct
+  } else if (key === "g") {
+    return "G" + oct
+  } else if (key === "h") {
+    return "A" + oct
+  } else if (key === "j") {
+    return "B" + oct
+  } else if (key === "k") {
+    return "C" + (oct + 1)
   }
+  return "";
 }
 
 // ---------- Exercise 5: keys are note names ----------
