@@ -11,7 +11,12 @@
 //          No brackets after showKey. You hand the function over; the browser calls it.
 // TODO 1c: change "keydown" to "keyup", save, and hold a key down. When does the message come?
 //          Change it back afterwards.
+function showKey(event) {
+  console.log("You pressed " + event.key);
+}
 
+document.addEventListener("keydown", showKey);
+document.addEventListener("keyup", showKey);
 // ---------- Step 2: one key, one note ----------
 // TODO 2a: write a function playNote(event). If event.key is "a", play "C4" for "8n":
 //            synth.triggerAttackRelease("C4", "8n");
