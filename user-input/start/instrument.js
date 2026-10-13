@@ -42,8 +42,31 @@ document.addEventListener("keydown", playNote);
 // TODO 3d: listen for "keydown" with startNote. Delete the playNote listener from step 2:
 //          startNote does its job now.
 let octave = 4;
-function noteFor(a) {
-  
+function noteFor(key) {
+  if (key === a) {
+    return "C" + octave;
+  } else if (key === s) {
+    return "D" + Octave;
+  } else if (key === d) {
+    return "E" + Octave;
+  } else if (key === f) {
+    return "F" + Octave;
+  } else if (key === g) {
+    return "G" + Octave;
+  } else if (key === h) {
+    return "A" + Octave;
+  } else if (key === j) {
+    return "B" + Octave;
+  } else if (key === k) {
+    return "C" + Octave;
+  }
+  return " ";
+}
+
+function startNote(event) {
+  if (noteFor(key) === " "){
+    
+  }
 }
 // ---------- Step 4: press starts it, release ends it ----------
 // TODO 4a: write a function stopNote(event). Ask noteFor for the note again.
