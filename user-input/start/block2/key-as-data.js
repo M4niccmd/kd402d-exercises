@@ -6,6 +6,7 @@
 const synth = new Tone.Synth().toDestination();
 
 // The octave every note is played in. Exercise 7 plays one higher with Shift.
+let playOctave = oct;
 let oct = 4;
 
 function handleKeyDown(event) {
@@ -18,6 +19,10 @@ function handleKeyDown(event) {
       synth.triggerAttackRelease(note, "8n");
     }
   }
+  if (event.shiftKey) {
+      playOctave = oct + 1;
+    }
+    return event.key.toLowerCase();
 }
 
 document.addEventListener("keydown", handleKeyDown);
@@ -50,6 +55,7 @@ function noteForKey(key, oct) {
   }
   return "";
 }
+
 
 // ---------- Exercise 5: keys are note names ----------
 // The letter IS the note: press c, hear C.
