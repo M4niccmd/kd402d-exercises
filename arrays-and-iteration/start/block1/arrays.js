@@ -15,7 +15,14 @@ let melody = ["C4", "E4", "G4", "B4"];
 // TODO 1c: log the last note twice: once as melody[3], once as melody[melody.length - 1].
 //          In a comment: why is the last index 3, when there are 4 notes?
 // 1d Predict: what does melody[4] log? Check.
+console.log(melody);
+console.log(melody.length);
+console.log(melody[0]);
 
+console.log(melody[3]);
+console.log(melody[melody.length-1]);
+
+console.log(melody[4]);
 // ---------- Exercise 2: start empty, build it up ----------
 // TODO 2a: make an empty array and log its length:
 //            let riff = [];
@@ -23,6 +30,7 @@ let melody = ["C4", "E4", "G4", "B4"];
 // TODO 2b: add four notes to the end, one at a time:  riff.push("C4");
 //          Log riff.length after each push. Predict each number first.
 // 2c In a comment: when would you start from [] instead of writing all the notes out?
+let riff = [];
 
 // ---------- Exercise 3: add at the front too ----------
 // TODO 3a: start from two notes, add one to the front and one to the end:
