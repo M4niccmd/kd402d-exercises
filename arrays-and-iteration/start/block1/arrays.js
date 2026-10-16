@@ -35,6 +35,8 @@ riff.push("C4");
 riff.push("G4");
 
 let chord = ["D4", "E4"];
+chord.unshift =["C4"];
+chord.push = ["B4"];
 console.log(riff.length);
 // ---------- Exercise 3: add at the front too ----------
 // TODO 3a: start from two notes, add one to the front and one to the end:
