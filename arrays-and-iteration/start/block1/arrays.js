@@ -20,7 +20,7 @@ console.log(melody.length);
 console.log(melody[0]);
 
 console.log(melody[3]);
-console.log(melody[melody.length-1]);
+console.log(melody[melody.length - 1]);
 
 console.log(melody[4]);
 // ---------- Exercise 2: start empty, build it up ----------
