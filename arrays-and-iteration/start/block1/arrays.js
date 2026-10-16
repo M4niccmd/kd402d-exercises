@@ -31,13 +31,19 @@ console.log(melody[4]);
 //          Log riff.length after each push. Predict each number first.
 // 2c In a comment: when would you start from [] instead of writing all the notes out?
 let riff = [ ];
+console.log(riff.length);
 riff.push("C4");
+console.log(riff.length);
+riff.push("C4");
+console.log(riff.length);
 riff.push("G4");
+console.log(riff.length);
+riff.push("G4");
+console.log(riff.length);
 
 let chord = ["D4", "E4"];
 chord.unshift =["C4"];
 chord.push = ["B4"];
-console.log(riff.length);
 // ---------- Exercise 3: add at the front too ----------
 // TODO 3a: start from two notes, add one to the front and one to the end:
 //            let chord = ["E4", "G4"];
